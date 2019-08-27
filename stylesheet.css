@@ -1,0 +1,660 @@
+*{
+   box-sizing: border-box;
+}
+body{
+    margin: 0;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*  code voor de header*/
+
+header{
+    clear: both;
+    top: -3em;
+}
+
+
+a{
+color: #2e7acc;
+text-decoration: none; 
+}
+
+a:active {
+  background: yellow;   
+}
+
+
+main > h1:first-child {
+text-align: center;
+}
+
+main > p {
+text-align: center;
+}
+
+main > h1 ,h2 {
+color: #1f5084; 
+}
+
+h3 , h4{
+color: #2e7acc;  
+}
+
+
+nav{
+    position: relative;
+    width: 100%;
+}
+
+
+/* verhaal en micro interactie*/
+
+header > section > article > img{
+    position: relative;
+    max-height: 30em;
+    left: 15%;
+    width: 70%;
+}
+
+header > section > article > h3 {
+  text-align: center;
+  position: center;
+  color: white;
+}
+
+header > section{
+  position: absolute;
+  width: 50%;
+  padding:0 1em 1em;
+  border: 1px solid rgba(0,0,0,.2);
+  background-color: hsla(211, 63%, 49%, 0.2);
+  box-shadow:0 0 5px rgba(0,0,0,.2);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4em;
+  top: -50em;
+  right: 1em;
+  transition: all 2s;
+}
+
+
+
+header > section > article:first-child.volgende{
+  transition: all 2s;
+  transform: scale(0);
+  order: 2;
+}
+
+header > section > article:first-child{
+  transform: scale(1);
+  transition: 2s;
+}
+
+header > section > article.second{
+transform: scale(1);
+transition: all 2s;
+position: absolute;
+top: 0;
+}
+
+header > section > article.hide{
+transform: scale(0);
+transition: all 2s;
+top: 0;
+}
+
+header > button {
+  font-size: x-small;
+  color: rgb(46, 122, 204);
+  top: 105px;
+  width: auto;
+  margin-left: 41px;
+  padding: 1em;
+  position: absolute;
+}
+
+header > section.move {
+  width: 30%;
+  height: auto;
+  padding:0 1em 1em;
+  border: 1px solid rgba(0,0,0,.2);
+  background-color: hsla(211, 63%, 49%, 0.8);
+  box-shadow:0 0 5px rgba(0,0,0,.2);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4em;
+  top:1em;
+  right: 1em;
+  transition:all 2s;
+}
+
+.popup{
+  opacity: 0;
+  float: right;
+  transition: 3s;
+  pointer-events: none;
+  cursor: default;
+  direction: ltr;
+}
+
+.show{
+  opacity: 1;
+  transition: 2s;
+  pointer-events:all!important;
+  cursor: default;
+  direction: rtl;
+}
+
+
+/* Hamburger menu micro interactie */
+
+
+.menu-area .icon {
+  display: none;
+}
+
+@media screen and (max-width: 40em) {
+  .menu-area a.icon {
+    float: left;
+    display: block;
+ 
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .menu-area.responsive {position: relative;}
+  .menu-area.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 150%;
+  }
+  .menu-area.responsive a {
+    float: none;
+    display: table-column;
+    text-align: left;
+  }
+}
+
+.menu-area {
+  overflow: hidden;
+  background-color: #2e7acc;
+  margin-top: -1em;
+  border-top-style: solid;
+  border-top-color: #f8c949;
+}
+
+.menu-area a {
+  float: left;
+  color: #f2f2f2;
+  text-align: left;
+  padding: 14px 16px;
+}
+
+@media screen and (max-width: 38em) {
+.menu-area a {
+float: none;
+}
+}
+
+.menu-area a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+header .menu-area .active {
+  color: #f8c949;
+  font-weight: 600;
+}
+
+.menu-area .icon {
+  display: none;
+}
+
+.navigation {
+  list-style-type: none;
+  margin-top: -2em;
+  background: #2e7acc;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: flex-end;
+  border-top-style: solid;
+  border-top-color: #f8c949;
+}
+
+
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  color: white;
+}
+
+.navigation a:hover {
+  color: darkblue;
+}
+
+.current {
+  text-decoration-color: darkblue; 
+}
+
+/* Code voor JS */
+
+header > h1 {
+  position: absolute;
+  top: 1em;
+  margin-left: 1em;
+  color: white;
+}
+
+header > p {
+  position: absolute;
+  top: 6em;
+  margin-left: 10em;
+  color: white;
+}
+
+header > p.move{
+
+  transform:scale(1.5) rotate(-360deg) skew(5deg, -20deg);
+}
+
+.search{
+  top: 3em;
+}
+
+
+body > main.show-search{
+  margin-top: 0;
+}
+
+body > main .show-search span {
+  top: -2.6rem;
+  transition: top .3s 0.3s ease-out;
+}
+
+
+/*  code voor de media queries*/
+
+/* Tablet*/
+
+@media all and (max-width: 50em) {
+  .navigation {
+    justify-content: space-around;
+    font:1em;
+  }
+
+  aside{
+    width: 90%
+  }
+}
+
+/* PC*/
+
+
+@media screen and (min-width: 50em){
+
+  #formulier {
+   display: inline;
+
+  }
+
+  main {
+     display: flex;
+   -webkit-flex-direction: row;
+    flex-direction: row;
+  }
+  main > article{
+    -webkit-flex: 1;
+    flex: 1;
+  }
+  aside {
+        width: 30%;
+  -webkit-order: -1;
+   order: -1;
+  }
+  main > article {
+    
+    -webkit-flex: 3;
+    flex: 3;
+  }
+  footer {
+    background-color: #ccc;
+        padding-top: 1em;
+  }
+
+  .img-bg{
+    width: 100%;
+    margin-top: -13%;
+}
+}
+
+/* retina*/
+
+@media (min-width: 63em){
+  .img-bg{
+    margin-top: -20%;
+}
+}
+
+
+/* Tablet*/
+
+@media screen and (max-width: 50em){
+  main > article {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+
+
+footer:last-child {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column wrap;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 0;
+    right: 0;
+    left: 0;
+    background-color: #efefef;
+}
+
+.img-bg{
+    position: inherit;
+    max-height:30em;
+    width: 100%;
+}
+
+.nav-area{
+    width: 100%;
+    top: 0em;
+}
+
+}
+
+
+/* Telefoon*/
+
+@media all and (max-width: 38em) {
+  .navigation {
+
+    flex-flow: wrap;
+    padding: 0;
+  }
+
+  .img-bg{
+    position: relative;
+    max-height:30em;
+    right:0;
+    width: 100%;
+}
+
+  .navigation > li > a {
+        display: none;
+    text-align: center;
+    padding: 0em;
+    font-size: : 1.3em;
+  }
+
+  .navigationa
+
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+
+  section.move {
+    position: relative;
+  }
+}
+
+
+
+main {
+    height: 100%;
+    margin-left:0.5em; 
+    margin-right:0.5em;
+}
+
+
+main > article {
+    order: 2;
+    padding: 20px;
+    border-left: 1px solid #777777;
+    border-right: 1px solid #777777;
+}
+aside {
+    background: white;
+    padding: 20px;
+}
+
+aside:first-child{
+    order: 1;
+}
+aside:last-child{
+    order: 3;
+}
+
+/*  code voor de footer*/
+
+@media all and (min-width: 50em) {
+    footer:last-child {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    bottom: -2em;
+    position: relative;
+    right: 0;
+    left: 0;
+}
+
+header > nav{
+    width: 100%;
+    margin-top: -1em;
+    position: absolute;
+}
+
+footer > section{
+    width: 32%;
+    border: 1px solid #2e7acc;
+    border-radius: 8px;
+    background: white;
+    padding: 20px;
+    display: block;
+}
+
+}
+
+/*  code voor de form*/
+
+.formulier{
+flex: none;
+
+}
+
+form {
+    margin: 0em 0;
+    max-width: 90%;
+    position: relative;
+    right: -5%;
+}
+
+
+fieldset {
+    border: 0;
+    border-radius: 2em;
+    box-shadow: 0 0 1em white;
+    padding: 3em 0 0 0;
+    background: #f8c949;
+    text-align: center;
+ 
+}
+fieldset + fieldset {
+    margin: 2em 0 0;
+}
+
+legend {
+    font-size: 1.5em;
+    text-align: center;
+    color: Black;
+    font-weight: bold;
+    margin:inherit;
+    position: relative;
+    top: 1.5em;
+    text-shadow: 1px 1px 3px white; 
+}
+
+legend + ol {
+    padding: 1em 0 0;
+    list-style: none;
+    border-radius: 1em 1em 1em 1em;
+}
+
+li:last-child {
+    border-radius: 0em 0em 2em 2em;
+}
+
+input {
+    display: block;
+    width: 90%;
+    box-sizing: border-box;
+    font-size: 1.2em;
+    border-radius: .5em;
+    box-shadow: inset .1em .1em .2em rgba(0,0,0,.5);
+    border: none;
+    transition: .5s;
+    margin: .3em 0;
+    padding: .2em;
+    margin-left: 5%;
+    text-align: center;
+}
+
+#voorkeuren{
+text-align: center;
+}
+
+li, ol{
+    padding: .5em;
+    margin: 0;
+    list-style: none;
+}
+
+ol > li:nth-child(2n + 1) {
+    background: none;
+}
+
+
+label > em {
+    content: "*";
+    color: red;
+}
+
+
+input:hover{
+    padding: .4em .2em;
+}
+
+input:focus {
+    box-shadow: .1em .1em .1em #2980b9;
+}
+
+input[type="radio"] {
+    height: 1em;
+    width: 1em;
+    display: inline-block;
+    box-shadow: none;
+}
+
+input[type="checkbox"] {
+    height: 1em;
+    width: 1em;
+    display: inline-block;
+    box-shadow: none;
+}
+
+/*  code voor de form*/
+
+section:hover:nth-child(n + 2) {
+}
+
+
+footer:hover {
+    transform: none;
+}
+
+form > fieldset.show-search{
+  margin-top: 0;
+}
+
+form > fieldset.show-search span {
+  top: -2.6rem;
+  transition: top .3s 0.3s ease-out;
+}
+/* Code voor de minrointeractie 
+*/
+
+
+header > form > fieldset{
+margin: 0;
+padding: 0.5em;
+position: relative;
+top: -8em;
+transition: margin 0.4s ease-out;
+}
+
+button {
+    display: block;
+    width: 90%;
+    font-size: 1.2em;
+    border-radius: .5em;
+    box-shadow: inset .1em .1em .2em rgba(0,0,0,.5);
+    border: none;
+    transition: .5s;
+    margin: .3em 0;
+    padding: .2em;
+    margin-left: 5%;
+    text-align: center;
+}
+
+header > form input[type="search"]:focus{
+  border: solid 0.1em #2e7acc;
+  border-radius: 1rem;
+}
+
+fieldset > div > button{
+    display: block;
+    width: 90%;
+    box-sizing: border-box;
+    font-size: 1.2em;
+    border-radius: .5em;
+    box-shadow: inset 0.1em 0.1em 0.2em rgba(0,0,0,.5);
+    border: none;
+    transition: .5s;
+    margin: .3em 0;
+    padding: .2em;
+    margin-left: 5%;
+    text-align: center;
+}
+
+header > form label{
+  position: absolute;
+  left: -666rem;
+}
+
+
+/* bronen:
+    w3c javascript hamburger: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav;
+    school oevening attribute selectors: http://dabblet.com/gist/1865805 
+    w3c controle HTML: https://validator.w3.org/#validate_by_input
+    w3c controle CSS: http://jigsaw.w3.org/css-validator/#validate_by_input
+hoe een input type wordt geselecteerd:
+    http://stackoverflow.com/questions/1002579/how-do-you-select-a-radio-button-in-css
+    css tricks for flexbox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/;
+    media quiries: https://codepen.io/estelle/pen/brDpB
+
+*/
