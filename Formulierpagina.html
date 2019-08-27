@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/stylesheet.css">
+        <script src="java/java.js"></script>
+        <!-- laad de iconen en het font in-->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Inloggen</title>
+    </head>
+
+
+    <body>
+        <!-- header met logo & navigatie -->
+        <header>
+            
+            <img src="./img/biertje.jpg" href="https://www.google.nl/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwikxLTn5sndAhVE3RoKHQ2nBA8QjRx6BAgBEAU&url=https%3A%2F%2Fwww.flickr.com%2Fphotos%2Farcheon%2F26875413044&psig=AOvVaw3O8BOjPNkMSJe2jFCNdWzU&ust=1537540475454677" class="img-bg"></img>
+            <h1>NS verhalen</h1>
+            <button>Spontaan verhaal</button>
+            <p> vol verassingen</p>
+            
+            <section class="verhaal">
+                <article class="next">
+                    <h3>Droom</h3>
+                    <img src="https://zoemartis.github.io/Frontend/images/droom.jpeg" alt="Droom">
+                </article>
+
+                <article class="second hide">
+                <h3>Stoned</h3>
+                <img src="https://zoemartis.github.io/Frontend/images/stoned.jpeg" alt="Stoned">
+                </article>
+
+                <button>Next</button>
+            </section>
+
+
+            <nav>
+                <ul id="myTopnav" class="menu-area navigation">
+                    <li><a href="./artikelpagina_old.html">NS stories</a></li>
+                    <li><a href="#">Categorieen</a></li>
+                    <li><a href="#">Filteren</a></li>
+                    <li><a class="active" href="./formulierpagina">Inloggen</a></li>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+                </ul>
+            </nav>
+
+        </header>
+
+
+        <main id="formulier">
+
+
+            <!-- Main article - Contact formulier  -->
+    
+
+            <h1>Aanmelden</h1>
+            <p>Alle voordelen van een NS-stories account</p>
+
+            
+            <form method="post" action="Formulierpagina.html">
+
+
+                <fieldset>
+                    <legend>Contactgegevens</legend>
+                    <label>
+                        <span>Naam:</span>
+                        <input type="text" name="name" required>
+                        <em>vereist</em>
+                    </label>
+                    <label>
+                        <span>leeftijd:</span>
+                        <input type="date" name="data" required>
+                        <em>vereist</em>
+                    </label>                    
+                    <label>
+                        <span>E-mailadres:</span>
+                        <input type="email" name="email" required>
+                        <em>vereist</em>
+                    </label>
+                    <label>
+                        <!-- Password field  bron: https://www.w3schools.com/howto/howto_js_toggle_password.asp-->
+                        <span>Wachtwoord:</span> 
+                        <input type="password" name="password" id="myInput" required>
+                        <em>vereist</em>
+
+                        <span>Herhaal wachtwoord:</span>
+                        <input type="password" name="passwordherhaal" id="myInput" required>
+                        <em>vereist</em>
+
+                       <!-- An element to toggle between password visibility -->
+                        <input type="checkbox" onclick="myFunction()">Show Password
+                    </label>
+                
+
+                <fieldset id="voorkeuren">
+                    <legend>voorkeuren</legend>
+                
+                   <fieldset>
+                        <legend>Lenkte van de teksten</legend>
+                        <label><input type="checkbox" name="kort">Korte tekst <150</label>
+                        <label><input type="checkbox" name="gemiddeld">Gemiddelde tekst 150-300</label>
+                        <label><input type="checkbox" name="lang">Lange tekst 300+</label>
+                    </fieldset>
+
+                   <fieldset>
+                        <legend>Leeftijd van de schrijver</legend>
+                        <label><input type="checkbox" name="jong">Jong</label>
+                        <label><input type="checkbox" name="volwassen">Volwassen</label>
+                        <label><input type="checkbox" name="ervaren">Ervaren</label>
+                    </fieldset>
+
+                   <fieldset>
+                        <legend>Vervoer van het verhaal</legend>
+                        <label><input type="checkbox" name="Trein">Trein</label>
+                        <label><input type="checkbox" name="Bus">Bus</label>
+                        <label><input type="checkbox" name="Auto">Auto</label>
+                        <label><input type="checkbox" name="Wandelen">Wandelen</label>
+                        <label><input type="checkbox" name="Vliegtuig">Vliegtuig</label>                        
+                    </fieldset>    
+
+                   <fieldset>
+                        <legend>Stijl van de teksten</legend>
+                        <label><input type="checkbox" name="Onmacht">Onmacht</label>
+                        <label><input type="checkbox" name="Grappig">Grappig</label>
+                        <label><input type="checkbox" name="Spannend">Spannend</label>
+                    </fieldset>                                    
+                </fieldset>
+
+                <input type="submit" value="Aanmelden">
+            </form>
+        </main>
+
+        <footer>
+                <section>
+                <h2>Direct naar</h2>
+                    <ul>
+                            <li><a href="#">Visie &amp; Beleid</a></li>
+                            <li><a href="#">Opbouw Studieprogramma</a></li>
+                            <li><a href="#">Competenties</a></li>
+                            <li><a href="#">Diploma</a></li>
+                            <li><a href="#">Beroepen</a></li>
+                    </ul>
+                 </section>
+
+                 <section>
+                <h2>Meer NS</h2>
+                    <ul>
+                        <li><a href="">Over NS</a></li> 
+                        <li><a href="">Werken bij NS</a></li>   
+                        <li><a href="">Partners in mobiliteit</a></li>  
+                        <li><a href="">Nieuws</a></li>  
+                    </ul>  
+                 </section>
+
+                 <section>
+                <h2>Zoeken</h2>
+                <form method="get" action="Formulierpagina.html">
+                    <input type="search" name="q">
+                    <input type="submit" value="Zoeken">
+                </form>
+                 </section>
+
+                <section>                <!-- bron: https://www.ns.nl/ datum: 15-09-2018 -->
+                    <h2>Sociale media</h2>
+                    <ul class="list">
+                    <li class="list__item">
+                    <a href="https://www.facebook.com/nederlandsespoorwegen" class="iconLink iconLink--facebook" target="_blank" rel="external noopener" data-analyticsname="Contact">Facebook</a>
+                    </li>
+                    <li class="list__item">
+                    <a href="https://twitter.com/ns_online" class="iconLink iconLink--twitter" target="_blank" rel="external noopener" data-analyticsname="Facebook">Twitter</a>
+                    </li>
+                    <li class="list__item">
+                    <a href="https://www.instagram.com/ns_online/?hl=nl" class="iconLink iconLink--instagram" target="_blank" rel="external noopener" data-analyticsname="Twitter">Instagram</a>
+                    </li>
+                    <li class="list__item">
+                     <a href="https://www.youtube.com/user/NS" class="iconLink iconLink--youtube" target="_blank" rel="external noopener" data-analyticsname="Instagram">YouTube</a>
+                    </li>
+                    <li class="list__item">
+                    <a href="https://www.linkedin.com/company/nederlandsespoorwegen" class="iconLink iconLink--linkedin" target="_blank" rel="external noopener" data-analyticsname="YouTube">LinkedIn</a>
+                     </li>
+                        </ul>
+                </section>
+        </footer>
+
+    </body>
+</html>
